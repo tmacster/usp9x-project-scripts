@@ -19,7 +19,7 @@ library(reshape2)
 # read counts available from GEO (GSE146800)
 
 seqdata <- read_tsv("EScell_readcounts.txt", skip = 1, 
-                    col_names = c("GeneID", "chr", "start", "end", "length", 
+                    col_names = c("GeneID", "chr", "start", "end", "strand", "length", 
                                   "neg1", "neg2", "neg3","low1_8h","low2_8h","low3_8h","high1_8h", "high2_8h", "flag1","flag2","flag3",
                                   "low1_48h","low2_48h","low3_48h","high1_48h","high2_48h","high3_48h")) %>%
   select(-chr:-length) %>%
